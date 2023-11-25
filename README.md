@@ -31,7 +31,7 @@ Nodemailer Receiving the emails/Sending the emails
  
 Packages being installed 
 react-native-web@~0.19.6 react-dom@18.2.0 - Web and React-Dom [Used for web] 
-Body-parser- Request body parts [Code] before handling code. Middleware is software that lies between an operating system and the applications running on it 
+Body-parser- Request body parts [Code] before handling code. Middleware is software that lies be the applications running on it 
 JSONWebToken- Token to store data  
 Express- Minimum framework for NodeJS minimalist web framework 
 Mongoose- Creates a connection between MongoDB and node.js 
@@ -74,12 +74,37 @@ The bind and listen connects the specified host and port
 23. “start”: “nodemon index.js”, helps with the speedy development of Node. js applications 
 24.  Yarn start 
  
-Initialize Login Screen and Register Screen [Expecting no use of 2fa and lagging system] 
+Initialize Navigation and Login Screen and Register Screen [Expecting no use of 2fa and lagging system] 
 1.Create LoginScreen and RegisterScreen in the ECommerce app 
 2.Install ES7 + React 
 3.Have to install React Navigation to change the screens 
+4.Yarn add @react-navigation/native [Adding navigation] 
+5. npx expo install react-native-screens react-native-safe-area-context;    
+6. npm install @react-navigation/native-stack 
+7. Yarn add @react-navigation/bottom-tabs [Adds bottom tabs] 
+8. Navigation and add stack navigator to make apps go to another page 
+9. Const stack = createStackNavigator(); 
+10.Import createNativeStackNavigator 
+11. Import LoginScreen into stack screen 
+12. Import RegisterScreen into stack screen 
+13. Remove everything from the app.js file, remove everything from file stackNavigator 
+14. Yarn add @react-navigation/native-stack 
+15. StackNavigator  
+16. Options={{headerShown: false}} 
+17. Make sure to add SafeAreaView to render content within the safe area boundaries of a device 
+18. KeyboardAvoidingView <View> <Text></Text></View> Provides a view that moves out of the way of virtual keyboard automatically 
+19.LoginScreen <Text> Login </Text> 
+20. FontSize: 17, fontWeight: “bold”, marginTop: 12, color”#041E42” 
+21. SafeAreaView add to react-native 
+22. <SafeAreaView style={{flex:1, backgroundColor:”white”, alignItems:”center}}> 
+23.Add a view style 
+24. Add View style again to the file to add more input [Email and password] 
+25. Copy paste the input  
  
  
+ 
+Important notes for react native project 
+<App.js> (Main build using stacknavigator)
  
  
  
