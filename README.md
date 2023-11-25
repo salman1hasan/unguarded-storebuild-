@@ -100,11 +100,34 @@ Initialize Navigation and Login Screen and Register Screen [Expecting no use of 
 23.Add a view style 
 24. Add View style again to the file to add more input [Email and password] 
 25. Copy paste the input  
+26. TextInput style={{color:”gray”, marginVertical:10, width:300}} 
  
+BUILDING OUT USER AUTHENTICATION  
+27. Const [email,setEmail] = useState(“”) 
+28. UseState from “react” and add const password,setpassword = useState(“”) 
+29. UseState is React Hook that allows you to add state to a functional component 
+30. In textinput useOnchange [Changes the value of the function] from text to the next value 
+31. SecureTextEntry={true} (Hides the text) 
+32.  <View style={{ marginTop: 12, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between',}}>  
+33. Text style ={{color: “#000”}}> Forgot Password</Text> 
+34. PRESSABLE is a way to send a user to another authentication 
+35. Pressable style={{marginTop:15}}, Text style={{textAlign: “center”, color:”gray”, fontSize:16}}>  
+36. To execute the pressable button style={{marginTop:15}}> 
+37. <Text style={{textAlign:”center”, color:”gray”, fontSize:16}}>  
+38. Add navigation onPress={() => navigation.navigate(“”)} 
+39. Add register to the register screen to get the viewer to go to the other screen 
  
- 
+
 Important notes for react native project 
-<App.js> (Main build using stacknavigator)
+<App.js> (Main build using stacknavigator) 
+In Stack navigator go to the build 
+In screens, login and screen change the format 
+ 
+ 
+ 
+ 
+ 
+ 
  
  
  
