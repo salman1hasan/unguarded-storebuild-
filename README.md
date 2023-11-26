@@ -318,6 +318,10 @@ const Order = mongoose.model('Order', orderSchema);
 
 module.exports = Order; 
 
+4. Endpoint to register in the app 
+	1.Request function 
+	2.try and catch console.log(“error registering user”)
+
  
  
  
