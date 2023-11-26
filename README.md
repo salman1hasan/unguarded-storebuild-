@@ -116,13 +116,62 @@ BUILDING OUT USER AUTHENTICATION
 37. <Text style={{textAlign:”center”, color:”gray”, fontSize:16}}>  
 38. Add navigation onPress={() => navigation.navigate(“”)} 
 39. Add register to the register screen to get the viewer to go to the other screen 
+40. RegisterScreen copy and paste the register screen  
+41. Add a section name to text input so the user can input his name 
+42. Change the icon of name with an ionIcon 
+43. Make sure password inputs and styling is correct before applying backend server 
  
-
+Backend code  
+1.In API folder create a user.js and add const mongoose = require(‘mongoose’). Mongoose is the connection for userSchema 
+2. UserSchema = new mongoose.Schema({, In the name type: String, required:true. Add email type String, required: true, unique: true, password: type: String, required:true, unique: true, password: {type:String, required:true}, verification:{ type:boolean, default: false} 
+	name:{ 
+ 
+	}, 
+	email: { 
+ 
+	}, 
+	password:{ 
+ 
+	}, 
+	verification:{ 
+ 
+	}, 
+}}; 
+ 
+What is a userSchema? 
+It’s a visual representation of a database. Can outline specific items.  
+userSchema  
+name: { 
+ 
+}, 
+email: { 
+	 
+}, 
+password: { 
+	 
+ 
+}. Verified: { 
+ 
+}, 
+vertificationToken: String, 
+address: [ 
+	{ 
+		name: String, 
+		mobileNo: String, 
+		houseNo: String, 
+		street: String, 
+		landmark:String, 
+		city:String, 
+		country: 
+		 
+ 
 Important notes for react native project 
 <App.js> (Main build using stacknavigator) 
 In Stack navigator go to the build 
 In screens, login and screen change the format 
  
+ 
+
  
  
  
