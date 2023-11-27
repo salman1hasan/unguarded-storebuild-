@@ -12,23 +12,20 @@ import React, { useState } from 'react';
 import { MaterialIcons } from '@expo/vector-icons';
 import { AntDesign } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
+const logoImg = require('../assets/unguardedlogo.png');
 
 const LoginScreen = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const navigation = useNavigation;
+  const [name, setName] = useState('');
+  const navigation = useNavigation();
 
   return (
     <SafeAreaView
       style={{ flex: 1, backgroundColor: 'white', alignItems: 'center' }}
     >
       <View>
-        <Image
-          style={{ width: 250, height: 250 }}
-          source={{
-            uri: 'https://assets.stickpng.com/thumbs/6160562276000b00045a7d97.png',
-          }}
-        />
+        <Image source={logoImg} style={{ width: 150, height: 150 }} />
       </View>
       <KeyboardAvoidingView>
         <View style={{ alignItems: 'center' }}>
@@ -44,7 +41,7 @@ const LoginScreen = () => {
           </Text>
         </View>
 
-        <View>
+        <View style={{ marginTop: 70 }}>
           <View
             style={{
               flexDirection: 'row',
@@ -62,6 +59,7 @@ const LoginScreen = () => {
               size={24}
               color="gray"
             />
+
             <TextInput
               value={email}
               onChange={(text) => setEmail(text)}
@@ -144,7 +142,10 @@ const LoginScreen = () => {
             Login
           </Text>
         </Pressable>
-        <Pressable style={{ marginTop: 15 }}>
+        <Pressable
+          onPress={() => navigation.navigate('Register')}
+          style={{ marginTop: 15 }}
+        >
           <Text style={{ textAlign: 'center', color: 'gray', fontSize: 16 }}>
             Don't have an account? Sign Up
           </Text>
